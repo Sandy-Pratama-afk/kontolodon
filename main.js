@@ -6,7 +6,7 @@ $(document).ready(function(){
 
       $(".search-icon").addClass("si-rotate");
 
-    });
+    })
 
     $("#search").blur(function() {
 
@@ -23,20 +23,5 @@ $(document).ready(function(){
           $(".go-icon").addClass("go-in");
 
         }
-
-        else {
-
-          $(".go-icon").removeClass("go-in");
-
         }
-
-    });
-
-    $(".go-icon").click(function(){
-
-      $(".search-form").submit();
-
-    });
-
-});
 
