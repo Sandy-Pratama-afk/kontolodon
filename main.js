@@ -1,27 +1,19 @@
-$(document).ready(function(){
+var wrap = $("#wrap");
 
-    $("#search").focus(function() {
+wrap.on("scroll", function(e) {
 
-      $(".search-box").addClass("border-searching");
+    
 
-      $(".search-icon").addClass("si-rotate");
+  if (this.scrollTop > 147) {
 
-    })
+    wrap.addClass("fix-search");
 
-    $("#search").blur(function() {
+  } else {
 
-      $(".search-box").removeClass("border-searching");
+    wrap.removeClass("fix-search");
 
-      $(".search-icon").removeClass("si-rotate");
+  }
 
-    });
+  
 
-    $("#search").keyup(function() {
-
-        if($(this).val().length > 0) {
-
-          $(".go-icon").addClass("go-in");
-
-        }
-        }
-
+});
